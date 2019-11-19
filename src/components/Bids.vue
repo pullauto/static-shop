@@ -11,45 +11,32 @@
         </span>
       </div>
     </div>
-    <div class="bids-content-box" style="padding-bottom: 3px;background-color: #FFFFFF; text-align: center;">
+    <div class="bids-content-box" style="padding-bottom: 3px;background-color: #FFFFFF;">
       <div class="bids-content">
-        <el-col :span="7.5">【集团总部】招标公告微信测试</el-col>
-        <el-col :span="0.5"></el-col>
-        <el-col :span="16" style="padding-left: 110px;">
-          <div style="display: inline-block;padding-top: -2px;">2016-11-14 23:59</div>
-          <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-        </el-col>
+        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
+        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
+        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
+      </div>
+      
+      <div class="bids-content">
+        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
+        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
+        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
       </div>
       <div class="bids-content">
-        <el-col :span="7.5">【集团总部】招标公告微信测试</el-col>
-        <el-col :span="16" style="padding-left: 110px;">
-          <div style="display: inline-block;padding-top: -2px; ">2016-11-14 23:59</div>
-          <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-        </el-col>
+        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
+        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
+        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
       </div>
       <div class="bids-content">
-        <el-col :span="7.5">【集团总部】招标公告微信测试</el-col>
-        <el-col :span="0.5"></el-col>
-        <el-col :span="16" style="padding-left: 110px;">
-          <div style="display: inline-block;padding-top: -2px;">2016-11-14 23:59</div>
-          <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-        </el-col>
+        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
+        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
+        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
       </div>
       <div class="bids-content">
-        <el-col :span="7.5">【集团总部】招标公告微信测试</el-col>
-        <el-col :span="0.5"></el-col>
-        <el-col :span="16" style="padding-left: 110px;">
-          <div style="display: inline-block;padding-top: -2px;">2016-11-14 23:59</div>
-          <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-        </el-col>
-      </div>
-      <div class="bids-content">
-        <el-col :span="7.5">【集团总部】招标公告微信测试</el-col>
-        <el-col :span="0.5"></el-col>
-        <el-col :span="16" style="padding-left: 110px;">
-          <div style="display: inline-block;padding-top: -2px;">2016-11-14 23:59</div>
-          <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-        </el-col>
+        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
+        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
+        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
       </div>
     </div>
 
@@ -71,7 +58,7 @@
     </div>
 
     <div class="bidstwo" style="background-color: #FFFFFF;height: 25px;line-height: 25px;">
-      <el-col :span="7.5" style=" width:170px ;">【集团总部】招标公告微信测试</el-col>
+      <el-col :span="7.5" style=" width:170px ;">【集团总部】招标公</el-col>
       <el-col :span="0.5"></el-col>
       <el-col :span="16" style="padding-left: 160px;"><div style="display: inline-block;padding-top: -2px;float: left;">2016-11</div></el-col>
     </div>
@@ -110,6 +97,7 @@ export default {
   /* float: left; */
   margin-top: 55px;
   width: 34.375rem;
+  /* 34.375rem  550px */
   border: 1px solid #b6daff;
 }
 .title {

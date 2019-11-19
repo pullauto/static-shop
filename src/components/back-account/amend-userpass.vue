@@ -85,8 +85,9 @@ export default {
   height: 425px;
   float: right;
   display: inline-block;
-  box-shadow: 4px 0px 3px 2px #99A9BF,
-              -4px 0  3px 2px #99A9BF
+  box-shadow: 1px 0px 2px 2px #99A9BF;
+  box-shadow: -1px 0px  2px 2px #99A9BF;
+
 }
 .amend-userPass-right .title{
   width: 760px;

@@ -51,5 +51,25 @@ export default new Router({
       name: 'mine-await',
       component: resolve => require(['@/components/back-mine-message/mine-await'], resolve)
     },
+    {
+      path: '/mine-message',
+      name: 'mine-message',
+      component: resolve => require(['@/components/back-mine-message/mine-message'], resolve)
+    },
+    {
+      path: '/online-apply',
+      name: 'mine-message',
+      component: resolve => require(['@/components/back-teamwork/onLine-apply'], resolve)
+    },
+    {
+      path: '/person',
+      name: 'person',
+      component: resolve => require(['@/components/back-mine-message/contacts-person'], resolve)
+    },
+    {
+      path: '/enter-bids',
+      name: 'enter-bids',
+      component: resolve => require(['@/components/back-teamwork/enter-bids-detail'], resolve)
+    }
   ]
 })

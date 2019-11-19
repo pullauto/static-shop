@@ -10,26 +10,19 @@
         </div>
       </div>
 
-      <!-- <div style="margin: 0 auto;">
-        <mine-message></mine-message>
-      </div> -->
-
       <div class="inputContent">
-
         <div class="inputContent-tab">
-          <div>全部</div>
-          <div>待接受邀请</div>
-          <div>待回标</div>
-          <div>待澄清</div>
-          <div>待更新部品</div>
-          <div style="border-right: 1px solid #d2d2d2;">待提交问卷</div>
+          <span>全部</span>
+          <span>待接受邀请</span>
+          <span>待回标</span>
+          <span>待澄清</span>
+          <span>待更新部品</span>
+          <span>待提交问卷</span>
         </div>
 
-        <div class="tab-content" style="">
-          <div style="border: 1px solid #cccccc;width:720px;height: 100%;">
+        <div class="tab-content">
 
           <el-table
-              stripe
               ref="singleTable"
               :data="tableData"
               highlight-current-row
@@ -38,31 +31,27 @@
               <el-table-column
                 type="index"
                 label="序号"
-                width="55"
-                >
+                width="50">
               </el-table-column>
               <el-table-column
-                property="name"
+                property="date"
                 label="待办类型"
-                width="100">
+                width="120">
               </el-table-column>
               <el-table-column
                 property="address"
                 label="待办主题"
-                width="325">
+                width="120">
               </el-table-column>
               <el-table-column
                 property="date"
-                label="发布日期"
-                width="100">
+                label="发布日期">
               </el-table-column>
               <el-table-column
-                width="140"
-                property="date"
+                property="address"
                 label="截止时间">
               </el-table-column>
-          </el-table>
-          </div>
+            </el-table>
         </div>
 
       </div>
@@ -71,12 +60,9 @@
 </template>
 
 <script>
-// import mineMessage from "@/components/back-mine-message/mine-message.vue"
 export default {
-    // comments:{mineMessage},
     data() {
       return {
-        flase:flase,
         activeName: 'second',
         data: [{
           label: '我的消息中心',
@@ -121,20 +107,20 @@ export default {
 
 
         tableData: [{
-                  date: '2016-05-0',
-                  name: '招标邀请',
+                  date: '2016-05-02',
+                  name: '王小虎',
                   address: '上海市普陀区金沙江路 1518 弄'
                 }, {
                   date: '2016-05-04',
-                  name: '招标邀请',
+                  name: '王小虎',
                   address: '上海市普陀区金沙江路 1517 弄'
                 }, {
                   date: '2016-05-01',
-                  name: '招标邀请',
+                  name: '王小虎',
                   address: '上海市普陀区金沙江路 1519 弄'
                 }, {
                   date: '2016-05-03',
-                  name: '招标邀请',
+                  name: '王小虎',
                   address: '上海市普陀区金沙江路 1516 弄'
                 }],
                 currentRow: null
@@ -158,91 +144,48 @@ export default {
 .amend-userPass-left{
   font-size: 13px;
   display: inline-block;
-  width: 179px;
+  width: 180px;
   background-color:#f4f5f6 ;
 }
-.amend-userPass-left .el-tree{
+.amend-userPass-left el-tree{
   background-color:#f4f5f6 ;
 }
 .amend-userPass-right{
-  width: 780px;
+  width: 775px;
   height: 425px;
   float: right;
   display: inline-block;
-  box-shadow:
-    -1px 0px 0px 0px #99A9BF,   /*左边阴影  绿色*/
-    1px 0px 0px 0px #99A9BF;   /*右边阴影  蓝色*/
+  box-shadow: 4px 0px 3px 2px #99A9BF,
+              -4px 0  3px 2px #99A9BF
 }
 .amend-userPass-right .title{
   width: 760px;
+  /* height: 55px; */
   padding-left: 15px;
-  padding-right: 5px;
+  /* margin-left: 15px; */
+  /* box-sizing: content-box; */
   line-height: 55px;
   font-size: 18px;
   background-color: #e0dfdf;
 }
-
+/* .form-input{
+  width: 325px;
+  height: 30px;
+} */
 .inputContent{
-  margin-top: 30px;
-  margin-left: 1px;
+  margin-left: 60px;
+  margin-top: 20px;
 }
-.inputContent .inputContent-tab{
-  width:637px ;
-  height:37px ;
-  overflow: hidden;
-  margin-left: 21px;
-  border-radius: 5px;
-  border: 1px solid #d2d2d2;
-  border-left: 1px;
-  /* box-sizing: border-box; */
-  /* border-bottom: 2px solid #c5c5c5; */
-}
-.inputContent-tab div{
-  text-align: center;
-  float: left;
-  width: 105px;
-  height: 35px;
-  line-height: 35px;
-  border-bottom:3px solid #d2d2d2;
-  border-left: 1px solid #d2d2d2 ;
-  background-color: #f7f7f7;
-}
-.el-table th>.cell{
-  font-size: 13px;
-  height: 32px;
-  line-height: 32px;
-  font-weight: normal;
-  color: #3c3c3c;
-  background-color: #eeeeee;
-}
-.el-tree-node__label{
-  font-size: 13px;
-}
+.el-tabs__item {
 
+}
 .tab-content{
-  margin: 0 auto;
-  border-radius: 1%;
-  /* text-align:center; */
-  /* margin-left: 9px; */
-  margin-top: 25px;
-  width: 720px;
-  height: 400px;
-  border: 1px solid #cccccc;
-  padding: 9px;
+
 }
-.el-table .cell{
-  height: 32px;
-  line-height: 32px;
-  color: #000000;
-  font-size: 13px;
-}
-.el-table_3_column_13  .cell{
-  color: #0077cc;
+.tab-content .cell{
+   font-size: 13px;
 }
 .el-table td,.el-table th{
   padding: 0;
-}
-.el-table_1_column_3{
-  widows: 320px;
 }
 </style>

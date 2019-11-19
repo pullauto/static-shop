@@ -34,7 +34,7 @@ export default {
   name: 'App',
   data(){
     return{
-      see:"flase"
+      see:flase
     }
   },
   components: {

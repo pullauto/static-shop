@@ -2,19 +2,17 @@
 	<div class="home">
 				<div class="home-image">
 				    <el-image
-				      style="width: 100%; height: 200px"
+				      style="width: 100%; height: 200px;margin-top: 5px;"
 				      :src="url"
 				      :fit="fit">
               </el-image>
 				</div>
-
-        <!-- 招标公告 -->
-        <!-- <el-col :span="18"> -->
-          <bids></bids>
-        <!-- </el-col> -->
-        <!-- <el-col :span="5"> -->
+        <!-- <div style="width: 100%;border: 1px solid ;"> -->
           <logina></logina>
-        <!-- </el-col> -->
+          <bids></bids>
+        <!-- </div> -->
+
+
 	</div>
 </template>
 
