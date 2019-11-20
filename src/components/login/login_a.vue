@@ -10,13 +10,13 @@
           <el-col :span="10"><el-input size="mini" class="input yzm" v-model.number="ruleForm.age" placeholder="验证码"></el-input></el-col>
           <div class="all-button">
             <el-col><div class="forgetPass">忘记密码?</div></el-col>
-            <el-button type="primary" style="height: 25px; width: 95px; float: left;" size="mini" @click="submitForm('ruleForm')">提交</el-button>
-            <el-button type="success" style="height: 25px; width: 65px; float: right;" size="mini" @click="resetForm('ruleForm')">注册</el-button>
+            <el-button type="primary" style="height: 25px; width: 95px; float: left;" size="mini" @click="gouser()">登录</el-button>
+            <el-button type="success" style="height: 25px; width: 65px; float: right;" size="mini" @click="goregister()">注册</el-button>
             <div class="button-logina">1</div>
           </div>
         </div>
         <div class="button-loginb">
-          <button class="button-three">地产供应商登录</button>
+          <button class="button-three"  @click="gologin()">地产供应商登录</button>
           <!-- <el-button class="button-three">地产供应商登录</el-button> -->
         </div>
       </div>
@@ -46,6 +46,17 @@ export default {
     };
   },
   methods: {
+    gouser(){
+      if(this.ruleForm.username&&this.ruleForm.username){
+        this.$router.push('/mine-await')
+      }
+    },
+    gologin(){
+      this.$router.push('/login')
+    },
+    goregister(){
+      this.$router.push('/register')
+    },
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {

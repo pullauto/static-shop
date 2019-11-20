@@ -12,32 +12,37 @@
       </div>
     </div>
     <div class="bids-content-box" style="padding-bottom: 3px;background-color: #FFFFFF;">
-      <div class="bids-content">
-        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
-        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
-        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
+
+      <div class="bids-content" @click="bidsDetail()">
+        <div class="bids-content-title">【集团总部】招标公</div>
+        <div class="bids-content-time">2016-11-14 23:59</div>
+        <el-button size="mini" class="bids-content-button">
+          <div style="font-size:10px;margin-left:-5px;">已截止</div>
+        </el-button>
       </div>
-      
+
       <div class="bids-content">
-        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
-        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
-        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-      </div>
-      <div class="bids-content">
-        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
-        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
-        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
-      </div>
-      <div class="bids-content">
-        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
-        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
-        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
+        <div class="bids-content-title">【集团总部】招标公</div>
+        <div class="bids-content-time">2016-11-14 23:59</div>
+        <el-button size="mini" class="bids-content-button">
+          <div style="font-size:10px;margin-left:-5px;">已截止</div>
+        </el-button>
       </div>
       <div class="bids-content">
-        <div style="width: 325px; display: inline-block;float: left;">【集团总部】招标公</div>
-        <div style="display: inline-block;float: left;">2016-11-14 23:59</div>
-        <el-button size="mini" style="margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;"><div style="font-size:10px;margin-left:-5px;">已截止</div></el-button>
+        <div class="bids-content-title">【集团总部】招标公</div>
+        <div class="bids-content-time">2016-11-14 23:59</div>
+        <el-button size="mini" class="bids-content-button">
+          <div style="font-size:10px;margin-left:-5px;">已截止</div>
+        </el-button>
       </div>
+      <div class="bids-content">
+        <div class="bids-content-title">【集团总部】招标公</div>
+        <div class="bids-content-time">2016-11-14 23:59</div>
+        <el-button size="mini" class="bids-content-button">
+          <div style="font-size:10px;margin-left:-5px;">已截止</div>
+        </el-button>
+      </div>
+
     </div>
 
 </div>
@@ -88,6 +93,11 @@ import axios from 'axios';
 export default {
   data() {
     return {};
+  },
+  methods:{
+    bidsDetail(){
+       this.$router.push('/bids-detail')
+    }
   }
 };
 </script>
@@ -141,5 +151,16 @@ table td {
   height: 25px;
   line-height: 25px;
   background-color: #ffffff;
+}
+.bids-content-title{
+  width: 325px;
+  display: inline-block;
+  float: left;
+}
+.bids-content-time{
+  display: inline-block;float: left;
+}
+.bids-content-button{
+  margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;
 }
 </style>

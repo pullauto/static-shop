@@ -1,24 +1,22 @@
 <template>
 	<div id="registerA">
-
 		<!--步骤条-->
-		<el-row type="flex" class="row-bg">
-		  <el-col :span="5"></el-col>
-		  <el-col :span="15">
-		  	<el-steps :active="0">
-				  <el-step title="填写账户信息" icon="el-icon-edit"></el-step>
-				  <el-step title="填写公司信息" icon="el-icon-upload"></el-step>
-				  <el-step title="提交审核" icon="el-icon-picture"></el-step>
-				</el-steps>
-		  </el-col>
-		</el-row>
+    <div style="">
+      <!-- <img src="../../../build/logo.png" alt=""> -->
+       <p>1</p>
+    </div>
+    <el-steps :active="active" finish-status="success" style="margin-left: 100px;">
+      <el-step title="步骤 1"></el-step>
+      <el-step title="步骤 2"></el-step>
+      <el-step title="步骤 3"></el-step>
+    </el-steps>
 
 		<!--填写账户信息-->
 		<el-row type="flex" class="row-bg">
 			<el-col :span="5"></el-col>
 			<el-col :span="14">
 				<el-row>
-					<el-form v-show="active==0" :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+					<el-form size="mini" v-show="active==0" :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 						<el-form-item label="登录账号:" prop="account">
 							<el-input type="text" v-model="ruleForm.account" placeholder="5-20个字母，数字或下划线组成" autocomplete="off"></el-input>
 						</el-form-item>
@@ -187,5 +185,17 @@
 </script>
 
 <style>
-
+.registerA{
+  margin-top: 200px;
+}
+.el-step__title{
+  font-size: 13px;
+}
+.row-bg{
+  background-color: #f6f7f9;
+}
+.el-form-item__label{
+  font-size: 13px;
+  margin-top: 10px;
+}
 </style>

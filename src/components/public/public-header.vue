@@ -7,10 +7,17 @@
     <!-- </el-col> -->
 
     <div class="public-header-title">
-      <span><i class="el-icon-s-tools"></i>返回采招首页</span>
-      <span><i class="el-icon-user-solid"></i>林森工程</span>
-      <span><i class="el-icon-s-tools"></i>管理后台</span>
-      <span><i class="el-icon-s-tools"></i>退出</span>
+      <span><i class="el-icon-s-tools"></i>
+        <router-link to="/home">返回采招首页</router-link>
+      </span>
+      <span><i class="el-icon-user-solid"></i>
+        <router-link to="/">林森工程</router-link>
+      </span>
+      <span><i class="el-icon-s-tools"></i>
+        <router-link to="/">管理后台</router-link>
+      </span>
+      <span><i class="el-icon-s-tools"></i>
+      <router-link to="/">退出</router-link></span>
     </div>
   </div>
 </template>
@@ -35,9 +42,14 @@
   height: 100px;
 }
 .public-header-title{
+  color: white;
   display: inline-block;
   float: right;
   margin-right: 170px;
+}
+a{
+  text-decoration: none;
+  color: white;
 }
 .public-header-title span{
   height: 97px;

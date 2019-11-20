@@ -53,10 +53,13 @@
         <!-- <div>
 
         </div> -->
-        <el-pagination
-          layout="prev, pager, next"
-          :total="50">
-        </el-pagination>
+        <div style="float: right;">
+          <el-pagination
+            layout="prev, pager, next"
+            :total="50">
+          </el-pagination>
+        </div>
+
       </div>
 
     </div>
@@ -233,6 +236,10 @@ export default {
 .el-table th {
   padding: 0;
 }
+/* .el-pagination{
+  width:100px ;
+  float: left;
+} */
 .el-pagination .btn-next{
   background-color: #eaedf0;
 }

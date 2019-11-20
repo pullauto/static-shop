@@ -1,18 +1,18 @@
 <template>
   <div class="firm-index">
     <el-row type="flex" class="row-bg">
-      <el-col :span="2"></el-col>
-      <el-col :span="17">
+      <!-- <el-col :span="2"></el-col> -->
+      <!-- <el-col :span="20"> -->
         <el-row>
           <basic-message></basic-message>
           <product-serve></product-serve>
           <license-data></license-data>
           <other-data></other-data>
         </el-row>
-      </el-col>
-      <el-col :span="5"></el-col>
+      <!-- </el-col> -->
+      <!-- <el-col :span="5"></el-col> -->
     </el-row>
-    
+
     <!-- 步骤条 -->
     <div class="firm-step">
       <el-steps direction="vertical" :active="0" >
@@ -47,6 +47,9 @@ export default {
 </script>
 
 <style>
+.row-bg{
+  /* margin-top: 30px; */
+}
 .firm-step {
   position: fixed;
 }

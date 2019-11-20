@@ -1,9 +1,7 @@
 <template>
   <div class="bids-detail">
-
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/home' }" class="el-icon-location-outline">
-        <!-- <div class="icon"><i class="el-icon-location-outline"></i></div> -->
         首页
       </el-breadcrumb-item>
       <el-breadcrumb-item>招标公告</el-breadcrumb-item>
@@ -12,7 +10,6 @@
         <el-breadcrumb-item></el-breadcrumb-item>
       </span>
     </el-breadcrumb>
-
     <div class="content-box">
       <div class="title">
         施工
@@ -51,7 +48,7 @@
 
 
 
-          <div class="content-right" style="margin-left: 20px; width: 600px;">
+          <div class="content-right" style="margin-left: 20px; width: 400px;">
             <div>
               <div class="content-right" style="width: 600px;">
                 <p style="float: left;">2015-02-09 23:59：</p>
@@ -86,7 +83,7 @@
           </div> -->
 
         </div>
-        <div style="text-align: center;margin-top: 40px;"> 
+        <div style="text-align: center;margin-top: 40px;">
           <button style="width: 110px;height: 40px; background-color: #dc4040;">报名</button>
         </div>
       </div>

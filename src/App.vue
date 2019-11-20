@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div class="header"></div>
+    <!-- <div class="header"></div> -->
 
-    <public-header v-show="true"></public-header>
+    <public-header v-show="$route.meta.back_face"></public-header>
 
-    <div :class="{'back-content':true,'content':flase}" v-show="true">
-      <div class="router-box" v-show="flase">
+    <div :class="{'back-content':$route.meta.back_face,'content':$route.meta.front_face}">
+      <div class="router-box" v-if="$route.meta.front_face">
         <router-link to="/home" class="tab-item">采购首页</router-link>
-        <router-link to="" class="tab-item">招标公告</router-link>
+        <router-link to="/bids" class="tab-item">招标公告</router-link>
         <router-link to="" class="tab-item">中标公告</router-link>
         <router-link to="" class="tab-item">供方招募</router-link>
         <div class="tab-add">1</div>
@@ -16,7 +16,7 @@
       <router-view />
     </div>
 
-    <loginb v-show="flase"></loginb>
+    <!-- <loginb v-show="$route.meta.login"></loginb> -->
 
     <!-- <div :class="{'back-content':true,'content':flase}"> -->
 
@@ -34,8 +34,11 @@ export default {
   name: 'App',
   data(){
     return{
-      see:flase
+      loginSee:flase
     }
+  },
+  mounted:function(){
+    // console.log($route.meta.login)
   },
   components: {
     home: Home,
