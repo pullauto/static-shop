@@ -23,7 +23,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .login-succeed{
   width: 255px;
   height: 215px;
@@ -39,7 +39,7 @@
   margin-left:10px;
   color: #0095FF;
 }
-.header-pooto img{
+.login-succeed .header-pooto img{
   width: 92px;
   height: 92px;
   border-radius: 50%;
@@ -62,7 +62,7 @@
   /* height: 15px; */
   transform: scale(1.5);
 }
-.el-button{
+.login-succeed .el-button{
   width: 190px;
   height: 30px;
   font-size: 13px;

@@ -2,7 +2,7 @@
 <div class="onLine-apply">
   <div class="search">
 
-        <div style="float: left; display: inline-block; margin-right: 7px;">查找按</div>
+        <div style="margin-top: -10px; float: left; display: inline-block; margin-right: 7px;">查找按</div>
         <el-date-picker
         style="float: left; display: inline-block;"
           v-model="value1"
@@ -11,9 +11,9 @@
         </el-date-picker>
 
         <!-- <el-col :span="10"> -->
-          <el-form ref="form" :model="form" label-width="55px" style=";margin-right: 5px; float: left; display: inline-block;">
+          <el-form ref="form" :model="form" label-width="55px" style="; margin-right: 5px; float: left; display: inline-block;">
           <!-- <el-form-item label="关键字"> -->
-          <div style="float: left; display: inline-block;margin: 0 10px;" >关键字</div>
+          <div style="float: left; display: inline-block;margin: 0 10px; margin-top: -10px;" >关键字</div>
             <el-select v-model="form.region" placeholder="请选择活动区域">
               <el-option label="区域一" value="shanghai"></el-option>
               <el-option label="区域二" value="beijing"></el-option>
@@ -22,7 +22,7 @@
         </el-form>
         <!-- </el-col> -->
 
-        <div style="float: left; display: inline-block; padding: 0 5px;">到</div>
+        <div style="float: left; display: inline-block; padding: 0 5px; margin-top: -10px;">到</div>
         <el-date-picker
         style="float: left; display: inline-block;"
           v-model="value1"
@@ -31,7 +31,7 @@
         </el-date-picker>
 
         <div class="mine-message-delete">
-          <div style="height: 30px; color:#0077cc;float: left; margin-left:10px ;">
+          <div style="height: 30px; color:#0077cc;float: left; margin-left:10px;margin-top: -10px;">
             <el-button size="mini">查找</el-button>
           </div>
         </div>
@@ -167,13 +167,17 @@ export default {
   width: 740px;
 }
 .onLine-apply .search{
+  margin-top: 20px;
   height: 50px;
   line-height: 50px;
   /* border: 1px solid; */
 }
-.el-input__inner{
+.onLine-apply .el-input__inner{
   height: 30px;
   width: 170px;
+}
+.onLine-apply .search .el-input__icon{
+  line-height: 1;
 }
 .search .el-input__inner{
   height: 30px;
@@ -192,15 +196,12 @@ export default {
 .el-form-item__label{
   font-size: 13px;
 }
-.el-button{
+.onLine-apply .el-button{
   width: 75px;
   height: 28px;
   background-color: #e7e7e7;
 }
 
-.onLine-apply{
-  width: 740px;
-}
 /* .mine-message-content{
   width: 740px;
 } */

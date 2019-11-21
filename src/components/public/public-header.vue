@@ -13,6 +13,9 @@
       <span><i class="el-icon-user-solid"></i>
         <router-link to="/">林森工程</router-link>
       </span>
+      <span><i class="el-icon-user-solid"></i>
+        <router-link to="/amend-userpass">账号管理</router-link>
+      </span>
       <span><i class="el-icon-s-tools"></i>
         <router-link to="/">管理后台</router-link>
       </span>
@@ -25,7 +28,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .public-header{
   margin: 0 auto;
   height: 100px;

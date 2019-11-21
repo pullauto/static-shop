@@ -60,7 +60,7 @@
       <!-- 中标流程头部公共样式 -->
       <div v-if="true">
 
-      <div class="header" v-if="false">
+      <div class="header" v-if="true">
         <div class="left-title-box">
           <img style="float: left;" src="../../assets/images/back-teamwork/title-icon.jpg">
           <div class="left-text">已入围</div>
@@ -76,80 +76,13 @@
       </div>
 
 
-      <!-- 我的待办 -->
-      <div class="inputContent" v-if="handleOpen==1">
-
-        <div class="inputContent-tab">
-          <div>全部</div>
-          <div>待接受邀请</div>
-          <div>待回标</div>
-          <div>待澄清</div>
-          <div>待更新部品</div>
-          <div style="border-right: 1px solid #d2d2d2;">待提交问卷</div>
-        </div>
-
-        <div class="tab-content" style="">
-          <div style="border: 1px solid #cccccc;width:720px;height: 100%;">
-
-          <el-table
-              stripe
-              ref="singleTable"
-              :data="tableData"
-              highlight-current-row
-              @current-change="handleCurrentChange"
-              style="width: 100%">
-              <el-table-column
-                type="index"
-                label="序号"
-                width="55"
-                >
-              </el-table-column>
-              <el-table-column
-                property="name"
-                label="待办类型"
-                width="100">
-              </el-table-column>
-              <el-table-column
-                property="address"
-                label="待办主题"
-                width="325">
-              </el-table-column>
-              <el-table-column
-                property="date"
-                label="发布日期"
-                width="100">
-              </el-table-column>
-              <el-table-column
-                width="140"
-                property="date"
-                label="截止时间">
-              </el-table-column>
-          </el-table>
-          </div>
-        </div>
-
-      </div>
 
 
 
       <div style="width:739px ; margin: 0 auto;">
-
-        <!-- 我的通知 -->
-        <mine-message v-if="handleOpen==2"></mine-message>
-        <!-- 在线报名 -->
-        <online-apply v-if="handleOpen==3"></online-apply>
-        <!-- 我的投标 -->
-        <mine-bids v-if="handleOpen==4"></mine-bids>
         <!-- 中标后流程 -->
-        <!-- <enterbids-detail></enterbids-detail> -->
-
-        <!-- 公司信息 -->
-        <div class="bzt" style="position: relative;left: -70px;">
-          <firm-message v-if="handleOpen==6"></firm-message>
-        </div>
+        <enterbids-detail></enterbids-detail>
       </div>
-
-
 
 
       </div>
@@ -159,19 +92,11 @@
 </template>
 
 <script>
-import mineMessage from "@/components/back-mine-message/mine-message.vue"
-import onlineApply from "@/components/back-teamwork/onLine-apply.vue"
-import mineBids from "@/components/back-teamwork/mine-bid.vue"
 import enterbidsDetail from "@/components/back-teamwork/enter-bids-detail.vue"
 
-import firmMessage from "@/components/register/firm/index.vue"
 export default {
     components:{
-      mineMessage:mineMessage,
-      onlineApply:onlineApply,
-      mineBids:mineBids,
-      enterbidsDetail:enterbidsDetail,
-      firmMessage:firmMessage
+      enterbidsDetail:enterbidsDetail
     },
     data() {
       return {
@@ -408,8 +333,6 @@ export default {
 .tab-content{
   margin: 0 auto;
   border-radius: 1%;
-  /* text-align:center; */
-  /* margin-left: 9px; */
   margin-top: 25px;
   width: 720px;
   height: 400px;

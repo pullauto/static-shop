@@ -104,19 +104,29 @@ export default new Router({
         back_face:true
       }
     },
+    // {
+    //   path: '/person',
+    //   name: 'person',
+    //   component: resolve => require(['@/components/back-mine-message/contacts-person'], resolve),
+    //   meta:{
+    //     front_face:false,
+    //     back_face:true
+    //   }
+    // },
     {
-      path: '/person',
-      name: 'person',
-      component: resolve => require(['@/components/back-mine-message/contacts-person'], resolve),
+      path: '/enter-bids',
+      name: 'enter-bids',
+      component: resolve => require(['@/components/back-teamwork/enter-bids-detail'], resolve),
       meta:{
         front_face:false,
         back_face:true
       }
     },
+    // 中标流程
     {
-      path: '/enter-bids',
-      name: 'enter-bids',
-      component: resolve => require(['@/components/back-teamwork/enter-bids-detail'], resolve),
+      path: '/bid-flow',
+      name: 'bid-flow',
+      component: resolve => require(['@/components/bid-flow/index'], resolve),
       meta:{
         front_face:false,
         back_face:true

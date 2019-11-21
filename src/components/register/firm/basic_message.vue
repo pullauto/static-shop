@@ -9,14 +9,18 @@
       <!-- options -->
       <el-form-item label="企业简称:" size="mini" prop="shortFirmName"><el-input type="text" v-model="ruleForm.shortFirmName" autocomplete="off"></el-input></el-form-item>
 
-      <el-form-item label="企业性质" size="small" prop="shortFirmName">
+      <el-form-item label="企业性质:" size="small" prop="shortFirmName">
         <el-col :span="9">
           <el-select v-model="ruleForm.shortFirmName" placeholder="--请选择--">
             <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
           </el-select>
         </el-col>
 
-        <el-col class="line" :span="6">业务区域</el-col>
+        <el-col class="line" :span="6" style="">
+          <span style="float: right;margin-right: 7px;">
+            业务区域:
+          </span>
+        </el-col>
         <el-col :span="9">
           <el-select v-model="ruleForm.shortFirmName" placeholder="--请选择--">
             <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
@@ -35,28 +39,44 @@
       <el-form-item label="公司成立时间:" size="small" prop="firmSetTime">
         <el-col :span="10"><el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.firmSetTime" style="width: 100%;"></el-date-picker></el-col>
 
-        <el-col class="line" :span="5">公司电话:</el-col>
+        <el-col class="line" :span="5">
+          <span style="float: right;margin-right: 7px;">
+            公司电话:
+          </span>
+        </el-col>
         <el-col :span="9"><el-input v-model.number="ruleForm.phone"></el-input></el-col>
       </el-form-item>
 
       <el-form-item label="办公场所产权:" size="small" prop="firmSetTime">
         <el-col :span="10"><el-input type="text" v-model="ruleForm.shortFirmName" autocomplete="off"></el-input></el-col>
 
-        <el-col class="line" :span="5">办公面积:</el-col>
+        <el-col class="line" :span="5">
+          <span style="float: right;margin-right: 7px;">
+            办公面积:
+          </span>
+        </el-col>
         <el-col :span="9"><el-input v-model.number="ruleForm.phone" placeholder="单位:平方米"></el-input></el-col>
       </el-form-item>
 
       <el-form-item label="上年营业额:" size="small" prop="firmSetTime">
         <el-col :span="10"><el-input v-model.number="ruleForm.phone" placeholder="单位:万元"></el-input></el-col>
 
-        <el-col class="line" :span="5">员工总数:</el-col>
+        <el-col class="line" :span="5">
+          <span style="float: right;margin-right: 7px;">
+          员工总数:
+          </span>
+        </el-col>
         <el-col :span="9"><el-input v-model.number="ruleForm.phone"></el-input></el-col>
       </el-form-item>
 
       <el-form-item label="注册资本:" size="small" prop="firmSetTime">
         <el-col :span="10"><el-input v-model.number="ruleForm.phone" placeholder="单位:万元"></el-input></el-col>
 
-        <el-col class="line" :span="5">币种:</el-col>
+        <el-col class="line" :span="5">
+          <span style="float: right;margin-right: 7px;">
+          币种:
+          </span>
+        </el-col>
         <el-col :span="9">
           <el-select v-model="ruleForm.shortFirmName" placeholder="--请选择--">
             <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
@@ -74,12 +94,12 @@
       <div
         class="while"
         style="
-        margin:-1rem 0  1rem 6.25rem;
-        font-size: 0.9375rem; width: 35%; background-color: #FFFFFF;"
+        margin:-1rem 0  1rem 12em;
+        font-size: 13px; width: 35%; background-color: #FFFFFF;"
       >
         (本次意向合作单位)
       </div>
-
+<!-- 上传 -->
       <el-form-item label="可合作单位:" size="small" prop="canJoinUnit">
         <el-input placeholder="(除本次意向合作单位之外的其他单位,可多选)" v-model="input2"><el-button slot="append" icon="el-icon-search"></el-button></el-input>
       </el-form-item>
@@ -155,4 +175,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

@@ -7,7 +7,7 @@
     <div :class="{'back-content':$route.meta.back_face,'content':$route.meta.front_face}">
       <div class="router-box" v-if="$route.meta.front_face">
         <router-link to="/home" class="tab-item">采购首页</router-link>
-        <router-link to="/bids" class="tab-item">招标公告</router-link>
+        <router-link to="" class="tab-item">招标公告</router-link>
         <router-link to="" class="tab-item">中标公告</router-link>
         <router-link to="" class="tab-item">供方招募</router-link>
         <div class="tab-add">1</div>
@@ -15,12 +15,11 @@
       <!-- <div class="space">kong</div> -->
       <router-view />
     </div>
+    <div :class="{'back-content':$route.meta.back_face,'content':$route.meta.front_face}">
+      <!-- <router-view /> -->
+    </div>
 
-    <!-- <loginb v-show="$route.meta.login"></loginb> -->
 
-    <!-- <div :class="{'back-content':true,'content':flase}"> -->
-
-    <!-- </div> -->
 
   </div>
 </template>
@@ -127,9 +126,14 @@ a:hover {
   border-radius: 4px;
   height: 24px;
 }
-.row-bg {
+/* .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
-}
-
+} */
+  .el-col{
+    font-size: 12px;
+  }
+  .el-form-item__label{
+    font-size: 13px;
+  }
 </style>

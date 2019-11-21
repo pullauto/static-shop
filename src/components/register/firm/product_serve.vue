@@ -23,7 +23,7 @@
           <el-input v-model="ruleForm.name"></el-input>
         </el-col>
         <el-col :span="4">
-          <el-button @click="resetForm('ruleForm')" style="width: 90%; margin-right: -10%;">上传</el-button>
+          <el-button @click="resetForm('ruleForm')" style="width: 90%; margin-left: 10%;">上传</el-button>
         </el-col>
       </el-form-item>
 
@@ -58,7 +58,11 @@
           <el-col :span="10">
             <el-input v-model="ruleForm.user" placeholder="审批人"></el-input>
           </el-col>
-          <el-col class="line" :span="4" prop="name">年检时间</el-col>
+          <el-col class="line" :span="4" prop="name">
+            <span style="float: right;margin-right: 7px;">
+            年检时间
+            </span>
+            </el-col>
           <el-col :span="10">
             <el-date-picker  type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
           </el-col>
@@ -72,7 +76,6 @@
           multiple>
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-          <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
       </el-form-item>
 
@@ -109,8 +112,15 @@
     }
 </script>
 
-<style>
+<style scoped="scoped">
   .product{
     margin-top: 6.25rem;
   }
+  .product .el-upload__text{
+    line-height: 13px;
+  }
+  .product .el-input__inner{
+    width: 360px;
+  }
+
 </style>

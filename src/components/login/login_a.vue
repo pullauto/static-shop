@@ -2,16 +2,20 @@
   <div id="login_a">
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
       <div class="logina-box">
-        <div class="login-box-data">
-          <el-col :span="12">集团供应商登录</el-col>
-
-          <el-input size="mini" class="input" type="text" v-model="ruleForm.username" placeholder="账号" autocomplete="off"></el-input>
-          <el-input size="mini" class="input" type="password" v-model="ruleForm.pass" placeholder="密码" autocomplete="off"></el-input>
-          <el-col :span="10"><el-input size="mini" class="input yzm" v-model.number="ruleForm.age" placeholder="验证码"></el-input></el-col>
+        <div class="login-box-data"
+          style="height: 160px;
+                width: 170px;
+                margin: 5px 10px;">
+          <el-col :span="12" style="margin-bottom: 10px;">集团供应商登录</el-col>
+          <el-input style="margin-bottom: 3px;" size="mini" class="input" type="text" v-model="ruleForm.username" placeholder="账号" autocomplete="off"></el-input>
+          <el-input style="margin-bottom: 3px;" size="mini" class="input" type="password" v-model="ruleForm.pass" placeholder="密码" autocomplete="off"></el-input>
+          <el-col :span="10" style="margin-bottom: 3px;"><el-input size="mini" class="input yzm" v-model.number="ruleForm.age" placeholder="验证码"></el-input></el-col>
+          <img style="width: 48px;height: 22px;margin-left: 8px;" src="../../../build/logo.png" alt="">
+          <div style="text-align: center;margin-top: 10px;">换一张</div>
           <div class="all-button">
             <el-col><div class="forgetPass">忘记密码?</div></el-col>
-            <el-button type="primary" style="height: 25px; width: 95px; float: left;" size="mini" @click="gouser()">登录</el-button>
-            <el-button type="success" style="height: 25px; width: 65px; float: right;" size="mini" @click="goregister()">注册</el-button>
+            <el-button type="primary" style="height: 25px; width: 95px; float: left; margin-top: 5px;" size="mini" @click="gouser()">登录</el-button>
+            <el-button type="success" style="height: 25px; width: 65px; float: right;margin-top: 5px;" size="mini" @click="goregister()">注册</el-button>
             <div class="button-logina">1</div>
           </div>
         </div>
@@ -74,7 +78,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .login_a {
   float: right;
   font-size: 12px;
@@ -89,13 +93,18 @@ export default {
   display: inline-block;
   border: 1px solid #c2d7e7;
 }
-.login-box-data {
+.login_a .logina-box .login-box-data {
+  height: 170px;
+  width: 170px;
   margin: 5px 10px;
 }
 .button-logina {
   /* margin-bottom: 5px; */
   color: white;
   height: 5px;
+}
+.login_a .el-input__inner{
+  border-radius: 0px;
 }
 .forgetPass {
   margin-top: 10px;
@@ -119,7 +128,7 @@ export default {
   background-color: #525252;
   margin: 7px 10px;
 }
-.input {
+.login_a .input {
   margin-top: 5px;
 }
 </style>

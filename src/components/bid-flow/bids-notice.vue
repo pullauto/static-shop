@@ -92,7 +92,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .bids-notice{
   /* width: 743px;
   height: 643px;
@@ -100,7 +100,7 @@
   border: 1px solid #d9cba9; */
   /* padding:34px 20px 0px 20px; */
 }
-.content-box{
+.bids-notice .content-box{
   width: 713px;
   height: 603px;
   /* margin:34px 20px 0px 20px; */
@@ -109,22 +109,22 @@
   border: 1px solid #d9cba9;
   border-top: 2px solid #ffb500;
 }
-.table-content{
+.bids-notice .table-content{
   margin: 25px 22px 0px 22px;
 }
-table{
+.bids-notice table{
   margin-top: 30px;
 }
-.table-td{
+.bids-notice .table-td{
   text-align: center;
   width:78px;
   height:38px;
 }
-.timer{
+.bids-notice .timer{
   display: inline-block;
   font-size: 12px;
 }
-.title-left{
+.bids-notice .title-left{
   width: 78px;
   border: ;
 }

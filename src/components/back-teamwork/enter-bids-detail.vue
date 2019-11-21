@@ -122,8 +122,7 @@
 
 <style>
 
-
-.el-step__title.is-wait,
+.bids-detail .el-step__title.is-wait,
 .el-step__title.is-process,
 .el-step__title.is-finish{
   width: 75px;
@@ -132,7 +131,7 @@
   margin-left: -25px;
 }
 
-.el-step__title.is-process{
+.bids-detail .el-step__title.is-process{
   width: 75px;
   height: 30px;
   color: white;
@@ -197,10 +196,10 @@ p{
 }
 
 /* 各个中标流程内容样式 */
-.content{
-  width: 100%;
+/* .content{ */
+  /* width: 100%; */
   /* background-color: #fffef4; */
-}
+/* } */
 .content .enter{
   text-indent: 1em;
   height: 49px;

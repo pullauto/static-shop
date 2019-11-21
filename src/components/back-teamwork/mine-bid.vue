@@ -1,37 +1,28 @@
 <template>
-<div class="onLine-apply">
+<div class="mine-bid">
   <div class="search">
 
-      <div style="float: left; display: inline-block; margin-right: 7px;">查找按</div>
-      <el-date-picker
-      style="float: left; display: inline-block;"
-        v-model="value1"
-        type="date"
-        placeholder="选择日期">
-      </el-date-picker>
-      
-      <!-- <el-col :span="10"> -->
-        <el-form ref="form" :model="form" label-width="55px" style=";margin-right: 5px; float: left; display: inline-block;">
-        <!-- <el-form-item label="关键字"> -->
-        <div style="float: left; display: inline-block;margin: 0 10px;" >关键字</div>
-          <el-select v-model="form.region" placeholder="请选择活动区域">
+
+      <el-form ref="form" :model="form" label-width="55px" style=";margin-right: 5px; float: left; display: inline-block;">
+        <div style="float: left; display: inline-block;margin: 0 10px;margin-top: -10px;">查找按</div>
+          <el-select v-model="form.region" placeholder="采购计划名称">
             <el-option label="区域一" value="shanghai"></el-option>
             <el-option label="区域二" value="beijing"></el-option>
           </el-select>
-        <!-- </el-form-item> -->
       </el-form>
-      <!-- </el-col> -->
-      
-      <div style="float: left; display: inline-block; padding: 0 5px;">到</div>
-      <el-date-picker
-      style="float: left; display: inline-block;"
-        v-model="value1"
-        type="date"
-        placeholder="选择日期">
-      </el-date-picker>
-      
+
+      <div style="margin-top: -10px; float: left; display: inline-block; margin-right: 7px;">关键字</div>
+      <div class="two">
+        <el-input
+        style="float: left; display: inline-block;"
+          v-model="value1"
+          placeholder="选择日期">
+        </el-input>
+      </div>
+
+
       <div class="mine-message-delete">
-        <div style="height: 30px; color:#0077cc;float: left; margin-left:10px ;">
+        <div style="height: 30px; color:#0077cc;float: right; position: relative;top: -10px; margin-left:10px margin-top: -20px;;">
           <el-button size="mini">查找</el-button>
         </div>
       </div>
@@ -43,11 +34,11 @@
 
     <div class="mine-message">
 
-      <div class="mine-message-delete">
+      <!-- <div class="mine-message-delete">
         <div style="height: 35px;line-height: 35px; color:#0077cc;float: right;">
           <el-button @click="toggleSelection([tableData[1], tableData[2]])">查找</el-button>
         </div>
-      </div>
+      </div> -->
 
       <div class="onLine-apply">
       <el-table
@@ -75,19 +66,21 @@
             width="160">
           </el-table-column>
 
+          <b @click="bidsFlow()">
           <el-table-column
             prop="date"
             label="当前状态"
             width="120">
           </el-table-column>
-          <el-table-column
+          </b>
+          <!-- <el-table-column
             prop="date"
             label="发布日期"
             width="113">
-          </el-table-column>
+          </el-table-column> -->
 
         </el-table>
-
+          <button v-on:click="bidFlow">点击</button>
         </div>
 
 
@@ -158,6 +151,9 @@ export default {
       },
       handleSelectionChange(val) {
         this.multipleSelection = val;
+      },
+      bidFlow(){
+        this.$route.push('/bid-flow')
       }
     }
   }
@@ -165,28 +161,35 @@ export default {
 
 <style>
 
-.onLine-apply{
+.mine-bid{
+  margin-top: 20px;
   width: 740px;
 }
-.onLine-apply .search{
+.mine-bid .search{
   height: 50px;
   line-height: 50px;
   /* border: 1px solid; */
 }
-.el-input__inner{
+.mine-bid .el-input__inner{
   height: 30px;
   width: 170px;
 }
-.search .el-input__inner{
+.mine-bid .search .el-input__inner{
   height: 30px;
   width: 170px;
 }
-.search .el-input {
+.mine-bid .search .two .el-input__inner{
+  width: 373px;
+}
+.mine-bid .search .el-input {
   width: 175px;
   height: 30px;
   /* margin-bottom: 20px; */
   position: relative;
   bottom: 10px;
+}
+.mine-bid .search .el-input__icon{
+  line-height: 1;
 }
 .el-input{
   font-size: 13px;
@@ -194,18 +197,12 @@ export default {
 .el-form-item__label{
   font-size: 13px;
 }
-.el-button{
+.mine-bid .el-button{
   width: 75px;
   height: 28px;
   background-color: #e7e7e7;
 }
 
-.onLine-apply{
-  width: 740px;
-}
-/* .mine-message-content{
-  width: 740px;
-} */
 .el-table_9_column_39  .cell{
   color: #0077cc;
   font-weight: bold;
@@ -234,7 +231,7 @@ export default {
 .el-tree-node__label {
   font-size: 13px;
 }
-.el-table .cell {
+.mine-bid .el-table .cell {
   height: 32px;
   line-height: 32px;
   font-size: 13px;

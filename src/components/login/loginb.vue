@@ -23,7 +23,7 @@
 
               <div style="width: 280px;height: 30px;" class="input-three">
                 <el-col :span="8">
-                 <el-input v-model="ruleForm.yzm" placeholder="验证码"></el-input>
+                 <el-input :size="mini" v-model="ruleForm.yzm" placeholder="验证码"></el-input>
                 </el-col >
 
                 <el-col :span="12">
@@ -103,7 +103,7 @@
   	}
 </script>
 
-<style>
+<style scoped>
 .loginb-main{
   margin: 0 auto;
   margin-top: 110px;
@@ -130,7 +130,7 @@
   height: 28px;
   font-size: 12px;
 }
-.el-input{
+.loginb-box .el-input{
   margin-top: 10px;
 }
 </style>

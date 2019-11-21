@@ -16,6 +16,7 @@
       style="width: 700px;height: 400px;border: 1px solid #dddddd;">
 
 
+
         <el-table
             stripe
             ref="singleTable"
@@ -128,7 +129,7 @@ export default {
   }
 </script>
 
-<style>
+<style scoped="scoped">
 .contacts-person{
   width: 723px;
   height: 567px;
@@ -153,15 +154,15 @@ export default {
   height: 462px;
   margin:0 auto;
 }
-.title{
+.contacts-person .title{
   margin-top: 10px;
   border: 1px solid #b6daff;
   background-color: #f0f9ff;
 }
-.title b{
+.contacts-person .title b{
   margin-left: 10px;
 }
-.page{
+.contacts-person .page{
   float: left;
   height:35px ;
   width:700px ;
@@ -170,7 +171,7 @@ export default {
   /* border: 1px solid #eaedf0; */
   line-height: 32px;
 }
-.number{
+.contacts-person .number{
   background-color: #eaedf0;
 }
 .el-pagination{
@@ -178,24 +179,25 @@ export default {
   display: inline-block;
   /* background-color: #eaedf0; */
 }
-.el-button{
-  margin-top: 6px;
+.contacts-person .el-button{
+  /* margin-top: 6px; */
   width: 70px;
   height: 30px;
   text-align: center;
   font-size: 13px;
   border-radius: 0px;
+  padding-left: 555px;
 }
-.el-button span{
+.contacts-person .el-button span{
   display: inline-block;
   position: relative;
-  right: 10px;
+  /* right: 10px;
   bottom: 5px;
-  margin-right: 100px;
+  margin-right: 100px; */
   text-align: center;
 }
-.button{
-  padding-left: 555px;
+.contacts-person .button{
+  /* padding-left: 555px; */
   margin-top: 10px;
   width: 100%;
   height: 42px;
@@ -212,7 +214,7 @@ export default {
 .el-table__body-wrapper{
   overflow:visible;
 }
-.el-table{
+.contacts-person .el-table{
   border: 1px solid #dddddd;
   border-top: 0px;
 }
@@ -224,12 +226,12 @@ export default {
 .el-tree-node__label {
   font-size: 13px;
 }
-.el-table .cell {
+.contacts-person .el-table .cell {
   height: 32px;
   line-height: 32px;
   font-size: 13px;
 }
-.tab-content .cell {
+.contacts-person .tab-content .cell {
   font-size: 13px;
 }
 .el-table td,

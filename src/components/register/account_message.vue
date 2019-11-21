@@ -12,7 +12,7 @@
     </el-steps>
 
 		<!--填写账户信息-->
-		<el-row type="flex" class="row-bg">
+		<el-row type="flex" class="row-bg" v-if="active==0">
 			<el-col :span="5"></el-col>
 			<el-col :span="14">
 				<el-row>
@@ -58,55 +58,65 @@
 
 			</el-col>
 		</el-row>
-
-
+    <div v-if="active==1">
+      <firm-message></firm-message>
+    </div>
+    <div v-if="active==2">
+      <submit-message></submit-message>
+    </div>
 	</div>
 </template>
 
 <script>
+  import firmMessage from "@/components/register/firm/index"
+  import submitMessage from "@/components/register/submit_message"
 	export default {
+    components:{
+      firmMessage:firmMessage,
+      submitMessage:submitMessage
+    },
 		data() {
 
 			//  	填写账户信息
-			var validateContact = (rule, value, callback) => {
-				if(!value) {
-					return callback(new Error('联系人不能为空'));
-				}
-				setTimeout(() => {
-					if(!Number.isInteger(value)) {
-						callback(new Error('请输入数字值'));
-						alert(value)
-					} else {
-						if(value.length < 11) {
-							callback(new Error('少于11位'));
-						} else {
-							callback();
-						}
-					}
-				}, 1000);
-			};
-			var validatePass = (rule, value, callback) => {
-				console.log(rule)
-				console.log(value)
+			// var validateContact = (rule, value, callback) => {
+			// 	if(!value) {
+			// 		return callback(new Error('联系人不能为空'));
+			// 	}
+			// 	setTimeout(() => {
+			// 		if(!Number.isInteger(value)) {
+			// 			callback(new Error('请输入数字值'));
+			// 			alert(value)
+			// 		} else {
+			// 			if(value.length < 11) {
+			// 				callback(new Error('少于11位'));
+			// 			} else {
+			// 				callback();
+			// 			}
+			// 		}
+			// 	}, 1000);
+			// };
+			// var validatePass = (rule, value, callback) => {
+			// 	console.log(rule)
+			// 	console.log(value)
 
-				if(value.length === '') {
-					callback(new Error('请输入密码'));
-				} else {
-					if(this.ruleForm.checkPass !== '') {
-						this.$refs.ruleForm.validateField('checkPass');
-					}
-					callback();
-				}
-			};
-			var validatePass2 = (rule, value, callback) => {
-				if(value === '') {
-					callback(new Error('请再次输入密码'));
-				} else if(value !== this.ruleForm.pass) {
-					callback(new Error('两次输入密码不一致!'));
-				} else {
-					callback();
-				}
-			};
+			// 	if(value.length === '') {
+			// 		callback(new Error('请输入密码'));
+			// 	} else {
+			// 		if(this.ruleForm.checkPass !== '') {
+			// 			this.$refs.ruleForm.validateField('checkPass');
+			// 		}
+			// 		callback();
+			// 	}
+			// };
+			// var validatePass2 = (rule, value, callback) => {
+			// 	if(value === '') {
+			// 		callback(new Error('请再次输入密码'));
+			// 	} else if(value !== this.ruleForm.pass) {
+			// 		callback(new Error('两次输入密码不一致!'));
+			// 	} else {
+			// 		callback();
+			// 	}
+			// };
 			return {
 				//  	步骤条
 				active: 0,
@@ -134,16 +144,16 @@
 						required: true,
 						min: 6,
 						max: 20,
-						validator: validatePass,
+						// validator: validatePass,
 						trigger: 'blur'
 					}],
 					checkPass: [{
 						required: true,
-						validator: validatePass2,
+						// validator: validatePass2,
 						trigger: 'blur'
 					}],
 					contact: [{
-						validator: validateContact,
+						// validator: validateContact,
 						trigger: 'blur'
 					}],
 					phone: [{
@@ -167,15 +177,21 @@
 			};
 		},
 		methods: {
+      goFirm(active){
+        console.log(active)
+      },
 			submitForm(formName) {
-				this.$refs[formName].validate((valid) => {
-					if(valid) {
-						alert('submit!');
-					} else {
-						console.log('error submit!!');
-						return false;
-					}
-				});
+        const active=this.active++
+        this.active==active
+        console.log(this.active)
+				// this.$refs[formName].validate((valid) => {
+				// 	if(valid) {
+				// 		alert('submit!');
+				// 	} else {
+				// 		console.log('error submit!!');
+				// 		return false;
+				// 	}
+				// });
 			},
 			resetForm(formName) {
 				this.$refs[formName].resetFields();
@@ -186,16 +202,20 @@
 
 <style>
 .registerA{
-  margin-top: 200px;
+  position: relative;
+  margin-top: 300px;
 }
-.el-step__title{
+.registerA .el-step__title{
   font-size: 13px;
 }
-.row-bg{
+.registerA .row-bg{
   background-color: #f6f7f9;
 }
-.el-form-item__label{
+.registerA .el-form-item__label{
   font-size: 13px;
   margin-top: 10px;
+}
+.registerA .el-input__inner{
+  width: 320px;
 }
 </style>

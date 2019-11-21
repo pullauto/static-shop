@@ -10,9 +10,9 @@
         </div>
       </div>
 
-      <div class="inputContent">
+      <div class="amend-userPass-input">
 
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form :model="ruleForm" size="mini" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
           <el-form-item label="账号状态:">
             <div class="account-status">使用中</div>
           </el-form-item>
@@ -71,7 +71,7 @@ export default {
   };
 </script>
 
-<style>
+<style scoped>
 .amend-userPass-left{
   display: inline-block;
   width: 180px;
@@ -85,8 +85,8 @@ export default {
   height: 425px;
   float: right;
   display: inline-block;
-  box-shadow: 1px 0px 2px 2px #99A9BF;
-  box-shadow: -1px 0px  2px 2px #99A9BF;
+ /* box-shadow: 1px 0px 0px 2px #99A9BF,
+              -1px 0px 0px 2px #99A9BF; */
 
 }
 .amend-userPass-right .title{
@@ -103,27 +103,31 @@ export default {
   width: 325px;
   height: 30px;
 } */
-.inputContent{
+.amend-userPass-input{
+  width: 450px;
   margin-left: 60px;
   margin-top: 20px;
 }
-.inputContent .el-form-item{
+.amend-userPass-input .el-form-item{
   margin-bottom: 0px;
 }
-.inputContent .account-status{
+.amend-userPass-input .account-status{
   font-size: 13px;
 }
 .el-tree-node__content{
   background-color:#f4f5f6 ;
 }
-.inputContent .el-form-item__label{
+.amend-userPass-input .el-form-item__label{
   font-size: 13px;
 }
-.inputContent .el-input__inner{
+.amend-userPass-input .el-input__inner{
   width: 325px;
   height: 30px;
 }
-.inputContent .el-button{
+.amend-userPass-input .el-form-item{
+  margin-top: 10px;
+}
+.amend-userPass-input .el-button{
    background-color: #0084e3;
    font-size: 13px;
    width: 95px;

@@ -94,6 +94,9 @@ export default {
   data() {
     return {};
   },
+  created:{
+    // this.$http.get('/api/').then(function(reonse))
+  },
   methods:{
     bidsDetail(){
        this.$router.push('/bids-detail')
@@ -102,7 +105,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped="scoped">
 .bids {
   /* float: left; */
   margin-top: 55px;
@@ -110,12 +113,12 @@ export default {
   /* 34.375rem  550px */
   border: 1px solid #b6daff;
 }
-.title {
+.bids .title {
   width: 100%;
   font-size: 12px;
   line-height: 25px;
 }
-.title-one {
+.bids .title-one {
   float: left;
   padding-bottom: 1px;
   width: 70px;
@@ -123,44 +126,44 @@ export default {
   display: inline-block;
   background-color: #0095ff;
 }
-.title-time {
+.bids .title-time {
   background-color: #f0f9ff;
   display: inline-block;
   padding-left: 150px;
 }
-.title-more {
+.bids .title-more {
   padding-right: 5px;
   float: right;
   color: #74abd6;
 }
 
-.title-box {
+.bids .title-box {
   border: 1px solid #b6daff;
 }
-table {
+.bids table {
   border-collapse: 'collapse';
 }
-table td {
+.bids table td {
   height: 25px;
   line-height: 25px;
 }
-.td-blue {
+.bids .td-blue {
   background-color: #f0f9ff;
 }
-.bids-content {
+.bids .bids-content {
   height: 25px;
   line-height: 25px;
   background-color: #ffffff;
 }
-.bids-content-title{
+.bids .bids-content-title{
   width: 325px;
   display: inline-block;
   float: left;
 }
-.bids-content-time{
+.bids .bids-content-time{
   display: inline-block;float: left;
 }
-.bids-content-button{
+.bids .bids-content-button{
   margin-left: 10px;width: 52px;height: 20px; margin-top: 2px;float: left;
 }
 </style>

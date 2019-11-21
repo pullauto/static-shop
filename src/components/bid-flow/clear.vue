@@ -125,12 +125,12 @@ export default {
   }
 </script>
 
-<style>
+<style scoped>
 .clear{
   text-align: center;
   width: 740px;
 }
-.mine-message-button .button{
+.clear .mine-message-button .button{
   margin-left: 15px;
   height: 35px;
   line-height: 35px;
@@ -140,48 +140,48 @@ export default {
 /* .mine-message-content{
   width: 740px;
 } */
-.el-table_9_column_39  .cell{
+.clear .el-table_9_column_39  .cell{
   color: #0077cc;
   font-weight: bold;
 }
 
-.el-table_10_column_42  .cell{
+.clear .el-table_10_column_42  .cell{
   text-align: center;
 }
-.el-table_11_column_47  .cell{
+.clear .el-table_11_column_47  .cell{
   color: #0077cc;
 }
-.el-table--scrollable-x .el-table__body-wrapper{
+.clear .el-table--scrollable-x .el-table__body-wrapper{
   overflow-x:visible ;
 }
-.el-table__body-wrapper{
+.clear .el-table__body-wrapper{
   overflow:visible;
 }
 
 
 
-.el-table th > .cell {
+.clear .el-table th > .cell {
   font-size: 13px;
   font-weight: normal;
   background-color: #eeeeee;
 }
-.el-tree-node__label {
+.clear .el-tree-node__label {
   font-size: 13px;
 }
-.el-table .cell {
+.clear .el-table .cell {
   height: 32px;
   line-height: 32px;
   font-size: 13px;
 }
-.tab-content .cell {
+.clear .tab-content .cell {
   font-size: 13px;
 }
-.el-table td,
-.el-table th {
+.clear .el-table td,
+.clear .el-table th {
   padding: 0;
 }
 
-.page{
+.clear .page{
   float: left;
   height:35px ;
   width:700px ;
@@ -190,16 +190,16 @@ export default {
   /* border: 1px solid #eaedf0; */
   line-height: 32px;
 }
-.el-pagination{
+.clear .el-pagination{
   float: left;
 }
-.el-pagination .btn-next{
+.clear .el-pagination .btn-next{
   background-color: #eaedf0;
 }
-.el-dialog, .el-pager li{
+.clear .el-dialog, .el-pager li{
   background-color: #eaedf0;
 }
-.el-pagination .btn-prev{
+.clear .el-pagination .btn-prev{
   background-color: #eaedf0;
 }
 /* 0077cc */

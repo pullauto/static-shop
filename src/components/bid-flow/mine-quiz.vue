@@ -69,7 +69,7 @@
       </div>
 
 
-      
+
 
 
   </div>
@@ -129,12 +129,12 @@ export default {
   }
 </script>
 
-<style>
+<style scoped>
 .mine-quiz{
   text-align: center;
   width: 740px;
 }
-.mine-message-button .button{
+.mine-quiz .mine-message-button .button{
   margin-left: 15px;
   height: 35px;
   line-height: 35px;
@@ -149,22 +149,22 @@ export default {
   font-weight: bold;
 }
 
-.el-table_10_column_42  .cell{
+.mine-quiz .el-table_10_column_42  .cell{
   text-align: center;
 }
 .el-table_11_column_47  .cell{
   color: #0077cc;
 }
-.el-table--scrollable-x .el-table__body-wrapper{
+.mine-quiz .el-table--scrollable-x .el-table__body-wrapper{
   overflow-x:visible ;
 }
-.el-table__body-wrapper{
+.mine-quiz .el-table__body-wrapper{
   overflow:visible;
 }
 
 
 
-.el-table th > .cell {
+.mine-quiz .el-table th > .cell {
   font-size: 13px;
   font-weight: normal;
   background-color: #eeeeee;
@@ -172,20 +172,20 @@ export default {
 .el-tree-node__label {
   font-size: 13px;
 }
-.el-table .cell {
+.mine-quiz .el-table .cell {
   height: 32px;
   line-height: 32px;
   font-size: 13px;
 }
-.tab-content .cell {
+.mine-quiz .tab-content .cell {
   font-size: 13px;
 }
-.el-table td,
+.mine-quiz .el-table td,
 .el-table th {
   padding: 0;
 }
 
-.page{
+.mine-quiz .page{
   float: left;
   height:35px ;
   width:700px ;
@@ -194,16 +194,16 @@ export default {
   /* border: 1px solid #eaedf0; */
   line-height: 32px;
 }
-.el-pagination{
+.mine-quiz .el-pagination{
   float: left;
 }
-.el-pagination .btn-next{
+.mine-quiz .el-pagination .btn-next{
   background-color: #eaedf0;
 }
-.el-dialog, .el-pager li{
+.mine-quiz .el-dialog, .el-pager li{
   background-color: #eaedf0;
 }
-.el-pagination .btn-prev{
+.mine-quiz .el-pagination .btn-prev{
   background-color: #eaedf0;
 }
 /* 0077cc */

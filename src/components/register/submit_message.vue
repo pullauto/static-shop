@@ -10,7 +10,7 @@
 </script>
 
 <style>
-.submit-indent{
+.submit_message .submit-indent{
   text-indent:-9em ;
 }
 .submit_message div{

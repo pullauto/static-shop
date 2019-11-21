@@ -59,20 +59,20 @@
   .el-col {
     border-radius: 4px;
   }
-  .bg-purple-dark {
+ .home .bg-purple-dark {
     background: #99a9bf;
   }
   .bg-purple {
     /*background: #d3dce6;*/
   }
-  .bg-purple-light {
+  .home .bg-purple-light {
     background: #e5e9f2;
   }
-  .grid-content {
+  .home .grid-content {
     border-radius: 4px;
     min-height: 36px;
   }
-  .row-bg {
+  .home .row-bg {
     padding: 10px 0;
     background-color: #f9fafc;
   }

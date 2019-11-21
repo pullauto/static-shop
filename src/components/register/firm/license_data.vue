@@ -22,7 +22,9 @@
           </el-date-picker>
         </el-col>
         <el-col :span="4">
+           <span style="float: right;margin-right: 7px;">
            至：
+           </span>
         </el-col>
         <el-col :span="10">
           <el-date-picker
@@ -81,7 +83,6 @@
           multiple>
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-          <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
       </el-form-item>
 
@@ -115,7 +116,7 @@
     }
 </script>
 
-<style>
+<style scoped>
   .license{
     margin-top: 6.25rem;
   }

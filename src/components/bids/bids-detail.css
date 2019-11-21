@@ -1,0 +1,51 @@
+.bids-detail .el-breadcrumb {
+    font-size: 13px;
+  }
+
+  .bids-detail .el-icon-arrow-right {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .el-breadcrumb-item .icon {
+    display: inline-block;
+    /* width:30px ; */
+  }
+
+  .bids-detail .content-box .title {
+    font-size: 13px;
+    color: #0077cc;
+    
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid #cccccc;
+    border-top: 2px solid #e28181;
+  }
+
+  .content-box .content {
+    width: 100%;
+    height: 400px;
+    padding-top: 22px;
+    border: 1px solid #cccccc;
+  }
+
+  .content .content-left {
+    float: left;
+    height: 42.8px;
+    width: 17.1875rem;
+    font-weight: bold;
+    /* border: 1px solid #005EA1; */
+    font-size: 13px;
+  }
+
+  .content .content-right {
+    float: left;
+    width: 17.1875rem;
+    font-size: 13px;
+  }
+
+  .el-form-item__label {
+    padding-left: -200px;
+  }

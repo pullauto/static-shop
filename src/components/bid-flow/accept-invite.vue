@@ -1,5 +1,5 @@
 <template>
-	<div id="registerA">
+	<div id="accept-invite">
 
 		<!--填写账户信息-->
 		<el-row type="flex" class="row-bg">
@@ -129,8 +129,8 @@
 	}
 </script>
 
-<style>
-.registerA{
+<style scoped>
+.accept-invite{
   margin-top: 200px;
 }
 .el-step__title{
@@ -139,34 +139,34 @@
 .row-bg{
   background-color: #fffef4;
 }
-.el-input__inner{
+.accept-invite .el-input__inner{
   width: 360px;
 }
-.el-form-item{
+.accept-invite .el-form-item{
   margin-bottom: 0px;
 }
-.el-textarea .el-textarea__inner{
+.accept-invite .el-textarea .el-textarea__inner{
   margin-top: 10px;
 }
-.el-form-item--mini.el-form-item,
+.accept-invite .el-form-item--mini.el-form-item,
 .el-form-item--small.el-form-item {
     margin-bottom: 0px;
 }
-.el-button{
+.accept-invite .el-button{
   width: 103px;
 }
-span .el-button{
+.accept-invite span .el-button{
   background-color:#0095ff ;
 }
 
 
 
-.el-form-item__label{
+.accept-invite .el-form-item__label{
   font-size: 13px;
   margin-top: 10px;
 }
 
-.el-textarea .el-textarea__inner{
+.accept-invite .el-textarea .el-textarea__inner{
   width: 360px;
   height: 60px;
 }

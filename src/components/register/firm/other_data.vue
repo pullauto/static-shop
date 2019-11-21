@@ -20,7 +20,9 @@
         </el-select>
       </el-col>
       <el-col :span="4">
+         <span style="float: right;margin-right: 7px;">
          职务：
+         </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -32,7 +34,9 @@
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
       </el-col>
       <el-col :span="4">
+         <span style="float: right;margin-right: 7px;">
          电话：
+         </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -44,7 +48,9 @@
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
       </el-col>
       <el-col :span="4">
-         电子邮箱：
+         <span style="float: right;margin-right: 2px;">
+           电子邮箱：
+           </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -69,7 +75,9 @@
         </el-select>
       </el-col>
       <el-col :span="4">
-         职务：
+         <span style="float: right;margin-right: 7px;">
+           职务：
+           </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -81,7 +89,9 @@
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
       </el-col>
       <el-col :span="4">
+         <span style="float: right;margin-right: 7px;">
          电话：
+         </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -93,7 +103,9 @@
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
       </el-col>
       <el-col :span="4">
+         <span style="float: right;margin-right: 2px;">
          电子邮箱：
+         </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" type="text" v-model="ruleForm.name"></el-input>
@@ -166,7 +178,9 @@
         </el-date-picker>
       </el-col>
       <el-col :span="4">
+         <span style="float: right;margin-right: 2px;">
          建筑面积：
+         </span>
       </el-col>
       <el-col :span="10">
         <el-input style="width: 100%;" v-model="ruleForm.name" placeholder="单位:平方米"></el-input>
@@ -269,10 +283,12 @@
         <el-button>上一步</el-button>
       </el-col>
       <el-col :span="4">
-        <el-button type="primary">提交</el-button>
+        <el-button type="primary" style="margin-left: 10px;" @click="goFirm()">提交</el-button>
       </el-col>
     </el-form-item>
   </el-form>
+
+
 </div>
 </template>
 
@@ -280,6 +296,7 @@
   export default {
       data() {
         return {
+          action:1,
           radio: '1',
           formInline: {
             user: '',
@@ -298,12 +315,16 @@
         };
       },
       methods: {
-
+        goFirm(item) {
+          const actice=this.active++
+          this.active=active
+            this.$emit('goFirm',item )
+        }
       }
     }
 </script>
 
-<style>
+<style scoped>
   .other{
     margin-top:6.25rem ;
   }
